@@ -3,6 +3,8 @@ package pl.michalboryczko.fivesecond.di
 import android.content.Context
 import dagger.Module
 import dagger.Provides
+import pl.michalboryczko.fivesecond.api.Api
+import pl.michalboryczko.fivesecond.api.ApiService
 import pl.michalboryczko.fivesecond.app.MainApplication
 
 /**
@@ -15,4 +17,5 @@ class AppModule{
     fun providesContext(application: MainApplication): Context {
         return application.applicationContext
     }
+
 }
