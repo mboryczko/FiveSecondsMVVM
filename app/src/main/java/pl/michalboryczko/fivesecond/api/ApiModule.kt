@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit
 @Module
 class ApiModule {
 
-    var endpoint: String = "michalboryczko.pl"
+    var endpoint: String = "http://www.michalboryczko.pl"
 
     @Provides
     fun provideGsonConverter(): Converter.Factory {

@@ -1,21 +1,33 @@
 package pl.michalboryczko.fivesecond.ui.main
 
-import android.arch.lifecycle.ViewModelProvider
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 import pl.michalboryczko.fivesecond.R
-import javax.inject.Inject
+import pl.michalboryczko.fivesecond.app.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    lateinit var viewModel :MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewModel = ViewModelProviders.of(this, viewModelFactory)
+        viewModel = ViewModelProviders.of(this, viewModelFactory)
                 .get(MainViewModel::class.java)
+
+        viewModel.currentQuestion.observe(this, Observer{
+            label.text = it?.question
+        })
+
+        questionCard.setOnClickListener {
+            viewModel.onCardClicked()
+        }
+
+
     }
+
 }

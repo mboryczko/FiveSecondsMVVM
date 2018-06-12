@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FiveSecond.iml" filepath="$PROJECT_DIR$/FiveSecond.iml" />
       <module fileurl="file://C:\Users\mjbor\AndroidStudioProjects\FiveSecondsMVVM\FiveSecond.iml" filepath="C:\Users\mjbor\AndroidStudioProjects\FiveSecondsMVVM\FiveSecond.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FiveSecondsMVVM.iml" filepath="$PROJECT_DIR$/FiveSecondsMVVM.iml" />
+      <module fileurl="file://C:\Users\user\Desktop\iDziennik\FiveSecond\FiveSecondsMVVM.iml" filepath="C:\Users\user\Desktop\iDziennik\FiveSecond\FiveSecondsMVVM.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
