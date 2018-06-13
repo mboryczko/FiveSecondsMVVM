@@ -1,4 +1,4 @@
-package pl.michalboryczko.fivesecond.api
+package pl.michalboryczko.fivesecond.source.api
 
 /**
  * Created by ${michal_boryczko} on 12.06.2018.

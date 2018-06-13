@@ -1,4 +1,4 @@
-package pl.michalboryczko.fivesecond.api
+package pl.michalboryczko.fivesecond.source.api
 
 import android.content.Context
 import io.reactivex.Observable

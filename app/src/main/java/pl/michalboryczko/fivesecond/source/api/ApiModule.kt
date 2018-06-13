@@ -1,9 +1,9 @@
-package pl.michalboryczko.fivesecond.api
+package pl.michalboryczko.fivesecond.source.api
 
 import android.content.Context
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import dagger.Module
 import dagger.Provides
-import javax.inject.Inject
 import retrofit2.Converter
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.Retrofit
@@ -45,6 +45,7 @@ class ApiModule {
                 .readTimeout(30, TimeUnit.SECONDS)
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .addInterceptor(interceptor)
+                .addInterceptor(StethoInterceptor())
                 .build()
 
     }

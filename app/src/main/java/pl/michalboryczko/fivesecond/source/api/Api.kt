@@ -1,4 +1,4 @@
-package pl.michalboryczko.fivesecond.api
+package pl.michalboryczko.fivesecond.source.api
 
 import io.reactivex.Observable
 import pl.michalboryczko.fivesecond.model.Question

@@ -3,9 +3,10 @@ package pl.michalboryczko.fivesecond.di
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
-import pl.michalboryczko.fivesecond.api.Api
-import pl.michalboryczko.fivesecond.api.ApiModule
+import pl.michalboryczko.fivesecond.source.api.ApiModule
 import pl.michalboryczko.fivesecond.app.MainApplication
+import pl.michalboryczko.fivesecond.source.database.AppDatabase
+import pl.michalboryczko.fivesecond.source.database.DatabaseModule
 import pl.michalboryczko.fivesecond.ui.main.MainModule
 import javax.inject.Singleton
 
@@ -18,6 +19,7 @@ import javax.inject.Singleton
                 AndroidSupportInjectionModule::class,
                 AppModule::class,
                 ApiModule::class,
+                DatabaseModule::class,
                 ViewModelBuilder::class,
                 MainModule::class
         ))

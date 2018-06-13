@@ -3,7 +3,7 @@ package pl.michalboryczko.fivesecond.ui.main
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import pl.michalboryczko.fivesecond.model.Question
-import pl.michalboryczko.fivesecond.repository.QuestionRepository
+import pl.michalboryczko.fivesecond.source.repository.QuestionRepository
 import java.util.*
 import javax.inject.Inject
 
@@ -21,6 +21,7 @@ class MainViewModel
     }
 
     fun onCardClicked(){
+        //getQuestions()
         emitNextCard()
     }
 
@@ -35,14 +36,12 @@ class MainViewModel
     }
 
     private fun emitNextCard(){
-        val index = Random().nextInt(questions.size)
-        if(!questions.isEmpty())
+        if(!questions.isEmpty()){
+            val index = Random().nextInt(questions.size)
             currentQuestion.value = questions[index]
-
+        }
 
     }
-
-
 
     
 }
